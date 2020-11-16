@@ -19,6 +19,7 @@
 |--------------------|------------|-------------------|
 | title              | string     | null: false       |
 | text               | text       | null: false       |
+| category_id        | string     | null: false       |
 | user               | references | foreign_key: true |
 | bud                |
 | like               |
