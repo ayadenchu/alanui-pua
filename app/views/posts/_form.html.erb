@@ -1,0 +1,23 @@
+
+<%= form_with model: @post, local: true do |f|%>
+  <div class="field">
+    <%= f.label :title, "Title" %><br />
+    <%= f.text_field :title, class: :title__field%>
+  </div>
+  <div class="field">Category
+  <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+  </div>
+  <div class="field">
+    <%= f.label :text, "Pua" %><br />
+    <%= f.text_area :text, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "Picture" %><br />
+    <%= f.file_field :image,class: :image__field %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
