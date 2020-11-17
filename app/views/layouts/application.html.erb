@@ -4,12 +4,37 @@
     <title>AlanuiPua</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
+    <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/basic_latin/mplus_webfonts.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <header class="header">
+      <div class="inner">
+        <div class="nav">
+            <h1 class="title">AlanuiPua</h1>
+            <%# if user_signed_in? %>
+            <div class="nav__right">
+              <%= link_to "Log out", "#",class: :nav__btn %> <%#destroy_user_session_path, method: :delete,%>
+              <%= link_to "New Pua", new_post_path, class: :nav__btn %>
+            </div>
+          <%# else %>
+          <%#<div class="nav__right">
+              <%= link_to "ログイン", "#", class: :nav__btn %>
+              <%#= link_to "新規登録", "#", class: :nav__btn %>
+          <%#</div>
+          <%# end %>
+        </div>
+      </div>
+    </header>
     <%= yield %>
+    <footer>
+      <p>
+        
+      </p>
+    </footer>
   </body>
 </html>
