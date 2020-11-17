@@ -37,7 +37,9 @@ a {
 }
 
 /* ヘッダー */
-
+.font {
+  font-family: 'Caveat', cursive;
+}
 .header {
   background-color: rgb(149, 204, 180);
   margin-bottom: 48px;
