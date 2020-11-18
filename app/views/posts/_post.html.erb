@@ -2,7 +2,7 @@
  <div class="ribbon16-wrapper">
     <span class="ribbon16"><%= post.category.name %></span>
     <div class="post__body" >
-      <%= link_to post.title, post_path(post), class: :post__title%>
+      <%= link_to post.title, post_path(post.id), class: :post__title%>
     </div>
   </div>
 </div>

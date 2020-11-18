@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-before_action :authenticate_user!, except: [:index, :show]
+before_action :authenticate_user!
 
   def index
     @posts = Post.all.order("created_at DESC")
@@ -18,6 +18,10 @@ before_action :authenticate_user!, except: [:index, :show]
     end
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+  
   private
   def post_params
     params.require(:post).permit(:title, :text, :category_id,:image).merge(user_id: current_user.id)
