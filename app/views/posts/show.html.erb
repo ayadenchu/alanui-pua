@@ -1,6 +1,13 @@
 <main class="main">
   <div class="inner">
-  <div class="modoru__btn"><%= link_to "戻る", "#", class: :modoru %> </div>
+  <div class="menu">
+    <div class="modoru__btn">
+      <%= link_to "戻る", "#", class: :modoru %> 
+    </div>
+    <div class="modoru__btn">
+      <%= link_to "編集",edit_post_path,class: :modoru %>
+    </div>
+  </div>
     <h4 class="title__show"><%= @post.title %></h4>
     <div class="note2">
     
