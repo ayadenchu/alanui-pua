@@ -13,7 +13,7 @@ before_action :set_post, only: [:show, :edit, :update,:destroy]
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to root_path
+      redirect_to action: :index
     else
       render :new
     end

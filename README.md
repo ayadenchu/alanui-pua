@@ -11,6 +11,7 @@
 ### Association
 
 - has_many :posts
+- has_many :likes
 - has_many :buds
 
 ## posts table
@@ -27,7 +28,19 @@
 ### Association
 
 - belongs_to :user
+- has_one    :likes
 - has_one    :bud
+
+## likes table
+| Column      | Type       | Options           |
+|-------------|------------|-------------------|
+| post        | references | foreign_key: true |
+| user        | references | foreign_key: true |
+
+### Association
+
+- belongs_to :post
+- belongs_to :user
 
 ## buds table
 

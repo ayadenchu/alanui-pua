@@ -1,19 +1,24 @@
 <main class="main">
   <div class="inner">
-  <div class="menu">
-    <div class="modoru__btn">
-      <%= link_to "戻る", "#", class: :modoru %> 
+  
+    <div class="menu">
+    <div class="menu__btn">
+      <%= link_to '戻る', :back %>
     </div>
     <% if current_user == @post.user %>
-      <div class="modoru__btn">
-        <%= link_to "編集",edit_post_path,class: :modoru %>
+      <div class="menu__btn">
+        <%= link_to "編集",edit_post_path %>
       </div>
       <div class="delete__btn">
-        <%= link_to "削除",post_path , method: :delete , class: :modoru %>
+        <%= link_to "削除",post_path , method: :delete %>
       </div>
     <% end %>
   </div>
+  
     <h4 class="title__show"><%= @post.title %></h4>
+    <div class='post-img-content'>  
+      <%= image_tag @post.image,class:"post-box-img" if @post.image.attached? %>
+    </div>
     <div class="note2">
       <div class="sen2">
         <p class="post_text"><%= @post.text %></p>

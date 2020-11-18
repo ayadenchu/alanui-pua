@@ -117,18 +117,18 @@ a {
   height: 50px;
   width: calc((100vw - 400px)/2);
   font-size: 20px;
-  
 }
 .actions{
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   text-align: center;
-
+  align-items: center;
+  
 }
 
 .form__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
-  font-size: 0.8em;
+  font-size: 1.2em;
   color: #fff;
   text-decoration: none;
   user-select: none;
@@ -137,7 +137,8 @@ a {
   border-radius: 3px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
   transition: 0.2s ease;
-  
+  width: calc(100%/4);
+  height: 100px;
 }
 
 .form__btn:hover {
@@ -266,6 +267,14 @@ a {
   border-bottom: solid 5px gray;
 }
 /* 詳細ページ */
+.post-img-content {
+  display: flex;
+  
+}
+.post-box-img {
+  margin: 30px auto 0;
+  
+}
 .title__show {
   width: calc(100% / 3);
   margin: auto;
@@ -300,7 +309,7 @@ a {
   border-color: transparent;
   border-top-color: rgb(174, 91, 118);
 }
-.modoru__btn{
+.menu__btn{
   padding: 0.4em 1.6em;
   margin-left: 10px;
   font-size: 15px;
@@ -311,7 +320,7 @@ a {
   width: 10%;
   text-align: center;
 }
-.modoru__btn:hover{
+.menu__btn:hover{
   color: #ffffff;
   background:rgb(184, 107, 133);
 }
@@ -334,6 +343,7 @@ a {
   display: flex;
   margin-bottom: 15px;
 }
+
 .note2{
   color: #696969;
   margin: 2em 2em;
@@ -355,6 +365,7 @@ a {
   word-wrap: break-word;
   white-space: pre-wrap;
 }
+
 .post_user_name {
   width: 10%;
   font-size: 15px;
