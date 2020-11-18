@@ -12,12 +12,14 @@
   </head>
 
   <body>
-  <header class="header">
+  <div class="container">
+    <header class="header">
       <div class="inner">
         <div class="nav">
-          <h1 class="title">AlanuiPua</h1>
+          <%= link_to "AlanuiPua", root_path ,class:"title" %> 
             <% if user_signed_in? %>
               <div class="nav__right">
+                <%= link_to "My page", user_path(current_user.id),class: :nav__btn %>
                 <%= link_to "Log out", destroy_user_session_path, method: :delete ,class: :nav__btn %> 
                 <%= link_to "New Pua", new_post_path, class: :nav__btn %>
               </div>
@@ -31,10 +33,9 @@
       </div>
     </header>
     <%= yield %>
-    <footer>
-      <p>
-        
-      </p>
+    <footer class="footer">
+      <p class="copyright"></p>
     </footer>
+    </div>
   </body>
 </html>
