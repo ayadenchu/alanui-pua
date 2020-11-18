@@ -302,9 +302,8 @@ a {
 }
 .modoru__btn{
   padding: 0.4em 1.6em;
-  margin-left: 20px;
+  margin-left: 10px;
   font-size: 15px;
-  color: rgb(184, 107, 133);
   text-decoration: none;
   user-select: none;
   border: 2px solid #eeeeee;
@@ -316,8 +315,24 @@ a {
   color: #ffffff;
   background:rgb(184, 107, 133);
 }
+.delete__btn{
+  padding: 0.4em 1.6em;
+  margin-left: 10px;
+  font-size: 15px;
+  text-decoration: none;
+  user-select: none;
+  border: 2px solid #eeeeee;
+  font-family: 'Caveat', cursive;
+  width: 10%;
+  text-align: center;
+}
+.delete__btn:hover{
+  color: #ffffff;
+  background:rgb(104, 71, 82);
+}
 .menu {
   display: flex;
+  margin-bottom: 15px;
 }
 .note2{
   color: #696969;
