@@ -1,0 +1,8 @@
+<main class="main">
+  <div class="inner">
+  <div class="modoru__btn"><%= link_to "戻る", "#", class: :modoru %> </div>
+  <div class="user_show_name"><%= @nickname %>さんの投稿一覧</div>
+    <%= render partial: 'posts/post', collection: @posts %>
+  </div>
+  </div>
+</main>

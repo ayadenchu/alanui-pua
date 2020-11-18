@@ -2,7 +2,7 @@ class Post < ApplicationRecord
   belongs_to :user
   has_one_attached :image
   with_options presence: true do
-    validates :title
+    validates :title,length:{maximum:18}
     validates :text
   end
   extend ActiveHash::Associations::ActiveRecordExtensions

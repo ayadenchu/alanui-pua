@@ -1,0 +1,18 @@
+<main class="main">
+  <div class="inner">
+  <div class="modoru__btn"><%= link_to "戻る", "#", class: :modoru %> </div>
+    <h4 class="title__show"><%= @post.title %></h4>
+    <div class="note2">
+    
+      <div class="sen2">
+        <p class="post_text"><%= @post.text %></p>
+      </div>
+      <div class="post_user_name">
+        <a href="/users/<%= @post.user.id %>" , class="user_name">
+          <%= @post.user.nickname %>
+        </a>
+      </div>
+    </div>
+    <%#= link_to @post.category.name, "#", class: :category_name %> 
+  </div>
+</main>

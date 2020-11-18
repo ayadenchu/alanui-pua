@@ -43,7 +43,7 @@ a {
 .header {
   background-color: rgb(149, 204, 180);
   margin-bottom: 48px;
-  padding: 40px 0;
+  padding: 20px 0;
 
 }
 .inner {
@@ -63,7 +63,6 @@ a {
 }
 
 .nav__btn{
-  display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 20px;
   color: rgb(184, 107, 133);
@@ -84,25 +83,46 @@ a {
 
 .form__wrapper{
   min-height: calc(100vh - 161px);
+  
 }
 
 .form__text {
-  height: 100px;
+  height: 200px;
   width: 50%;
+  font-size: 20px;
+  
+}
+.pua_field{
+  text-align: center;
+  margin: 10px 10px 20px 10px;
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+}
+.category_field{
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
 }
 
 .field{
   height: 100px;
   width: calc(100vw - 400px);
-  
   margin: 30px auto;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
 }
 .title__field {
   height: 50px;
   width: calc((100vw - 400px)/2);
+  font-size: 20px;
+  
 }
 .actions{
   margin-bottom: 40px;
+  text-align: center;
+
 }
 
 .form__btn{
@@ -117,6 +137,7 @@ a {
   border-radius: 3px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
   transition: 0.2s ease;
+  
 }
 
 .form__btn:hover {
@@ -128,16 +149,28 @@ a {
   display: flex;
   height: 30px;
   width: 15%;
+  justify-content: center;
+  margin: auto;
 }
 .mage__field {
   display: flex;
 }
 /* メイン */
-
+.main {
+  display: block;
+  margin-bottom: 200px;
+}
+.container {
+  position: relative;
+  min-height: 100%;
+}
 .page-heading {
+  color: rgb(50, 82, 50);
   font-size: 50px;
   margin-bottom: 28px;
   font-family: 'Caveat', cursive;
+  border-bottom: solid 5px gray;
+  text-align: center;
 }
 .post__wrapper {
   display: flex;
@@ -151,9 +184,10 @@ a {
 .post__title {
   display: block;
   margin: auto;
+  padding: 5% 0 0 0;
   font-size: 30px;
   font-family: 'M+ Type-1 (general-j) Medium';
-  margin-bottom: 8px;
+  justify-content: center;
 }
 .post__body{
   padding:10px;
@@ -180,6 +214,8 @@ a {
   width: 300px;
   background:rgb(184, 107, 133);
   box-sizing: border-box;
+  text-align: center;
+  justify-items: center;
   }
 
 .ribbon16 {  
@@ -220,84 +256,115 @@ a {
   border-right: 20px solid transparent;
   border-top: 10px solid rgb(167, 209, 191);
 }
-
+/* ユーザー詳細ページ */
+.user_show_name{
+  margin-top: 30px;
+  text-align: center;
+  font-family:'M+ Type-1 (general-j) Medium';
+  font-size: 25px;
+  color: rgb(149, 204, 180);
+  border-bottom: solid 5px gray;
+}
 /* 詳細ページ */
-.prototype__wrapper{
-  min-height: calc(100vh - 161px);
-}
-.prototype__hedding{
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-}
-.prototype__user{
-  display: block;
-  font-size: 16px;
-  color: #999;
-  text-align: center;
-  text-decoration: underline;
-}
-.prototype__image{
-  width: 40%;
-  margin: 0 auto;
-  padding: 16px 0;
-}
-.prototype__detail{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 8px;
-}
-.detail__title{
+.title__show {
+  width: calc(100% / 3);
+  margin: auto;
   font-size: 20px;
-  font-weight: bold;
+  position: relative;
+  padding: 15px;
+  background: rgb(201, 108, 139);
+  text-align:center;
 }
-.prototype__manage{
-  display: flex;
-  justify-content: center;
-  padding-top: 16px;
+
+.title__show:before{
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 0;
+  border-color: transparent;
+  border-right-color:rgb(174, 91, 118);
 }
-.prototype__btn{
-  display: block;
+.title__show:after{
+  content: " ";
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 0;
+  border-color: transparent;
+  border-top-color: rgb(174, 91, 118);
+}
+.modoru__btn{
   padding: 0.4em 1.6em;
-  font-size: 0.4em;
-  color: #999;
+  margin-left: 20px;
+  font-size: 15px;
+  color: rgb(184, 107, 133);
   text-decoration: none;
   user-select: none;
-  border: 1px #999 solid;
-  border-radius: 3px;
-  transition: 0.4s ease;
-  margin: 0 4px;
+  border: 2px solid #eeeeee;
+  font-family: 'Caveat', cursive;
+  width: 10%;
+  text-align: center;
 }
-.prototype__btn:hover{
-  color: #fff;
-  background: #999;
-}
-
-.prototype__comments{
-  background-color: #f6f6f6;
-  padding: 20px;
-  margin: 28px 0 40px 0;
+.modoru__btn:hover{
+  color: #ffffff;
+  background:rgb(184, 107, 133);
 }
 
-.comments_lists{
-  padding-left: 20px;
+.note2{
+  color: #696969;
+  margin: 2em 2em;
+  font-weight: bold;
+  border: solid 1px #e6e6e6;
+  padding:  2em 2em 1em;
+  box-shadow:2px 2px 0 rgba(0,0,0,.1);
 }
-
-.comments_list{
-  list-style-type: square;
-  padding-bottom: 5px;
+.sen2{
+  background-color: #fff;
+  background-image:
+  linear-gradient(180deg, rgba(100, 100, 100, 0) 0%, rgba(100, 100, 100, 0) 98%, #646464 100%);
+  background-size: 100% 2em;
+  line-height: 2em;
+  padding: 2em 1em 0.2em 1em;
+  width:100%;
 }
-
-.comment_user{
-  font-size: 16px;
-  color: #999;
-  text-decoration: underline;
+.post_text {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+.post_user_name {
+  width: 10%;
+  font-size: 15px;
+  justify-content: end;
+  margin-left: auto;
+}
+.user_name {
+  color: rgb(174, 91, 118);
+}
+.category_name {
+  padding: 0.4em 1.6em;
+    font-size: 20px;
+    color: rgb(184, 107, 133);
+    text-decoration: none;
+    user-select: none;
+    border: 2px solid rgb(119, 67, 67);
+    font-family: 'Caveat', cursive;
+    border-radius: 30%;
+}
+.category_name:hover{
+  color: #ffffff;
+  background:rgb(184, 107, 133);
 }
 
 /* ユーザーページ */
 .user__wrapper{
-  min-height: calc(100vh - 161px);
+  min-height: calc(100vh - 140px);
 }
 .table{
   border-collapse: collapse;
@@ -328,15 +395,12 @@ a {
 }
 /* フッター */
 
-.footer {
-  background-color: #999;
-  padding: 10px 0;
+/*.footer {
+ 
 }
 .copyright {
-  text-align: center;
-  color: #fff;
-  font-size: 10px;
-}
+  
+}*/
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
