@@ -44,6 +44,10 @@ before_action :set_post, only: [:show, :edit, :update,:destroy]
       redirect_to root_path
     end
   end
+
+  def search
+    @posts = Post.search(params[:keyword])
+  end
   
   private
   def post_params

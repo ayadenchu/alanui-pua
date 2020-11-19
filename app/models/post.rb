@@ -7,4 +7,12 @@ class Post < ApplicationRecord
   end
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
+
+  def self.search(search)
+    if search != ""
+      Post.where('category_id LIKE(?)')
+    else
+      Post.all
+    end
+  end
 end
