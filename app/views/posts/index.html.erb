@@ -1,7 +1,13 @@
 <main class="main">
   <div class="inner">
-    <div class="post__wrapper">
-      <%= render partial: 'post', collection: @posts %>
+    <div class="index_top">
+      <div class="current_user">
+      <div class="current_user_text">- <%= current_user.nickname %> -</div>
+      </div>
+      <div class="page-heading">Pua</div>
     </div>
+      <div class="post__wrapper">
+        <%= render partial: 'post', collection: @posts %>
+      </div>
   </div>
 </main>

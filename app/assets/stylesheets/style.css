@@ -266,11 +266,24 @@ a {
   color: rgb(149, 204, 180);
   border-bottom: solid 5px gray;
 }
+/* 投稿一覧*/
+.index_top {
+  font-size: 25px;
+}
+.current_user {
+  margin-right: calc(100%/4);
+  color: rgb(225, 187, 61);
+  font-family:'M+ Type-1 (general-j) Medium';
+  border-bottom: solid 5px rgb(174, 91, 118);
+}
+.current_user_text{
+  margin-left: 20px;
+}
 /* 詳細ページ */
 .post-img-content {
   display: flex;
-  
 }
+
 .post-box-img {
   margin: 30px auto 0;
   
