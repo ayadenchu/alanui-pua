@@ -1,9 +1,0 @@
-  <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
-  <%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-  <%= form.submit "検索", class: "search-btn" %>
-  <% end %>
-
-  <div class="contents row">
-    <%= render partial: 'post', collection: @posts %>
-  
-  </div>

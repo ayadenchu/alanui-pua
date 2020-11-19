@@ -4,10 +4,6 @@
       <div class="current_user">
       <div class="current_user_text">- <%= current_user.nickname %> -</div>
       </div>
-  <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
-  <%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-  <%= form.submit "検索", class: "search-btn" %>
-  <% end %>
       <div class="page-heading">Pua</div>
     </div>
       <div class="post__wrapper">
