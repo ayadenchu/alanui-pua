@@ -35,19 +35,23 @@ a {
   text-decoration: none;
   color: #3b4043;
 }
+/*トップページ*/
+.index__top {
+  background-color: rgba(141, 92, 127, 0.761);
+  height: 100vh;
 
+}
 /* ヘッダー */
 .font {
   font-family: 'Caveat', cursive;
 }
 .header {
   background-color: rgb(149, 204, 180);
-  margin-bottom: 48px;
   padding: 20px 0;
 
 }
 .inner {
-  width: 1050px;
+  width: 1100px;
   margin: 0 auto;
 }
 .nav {
@@ -324,7 +328,7 @@ a {
 }
 .menu__btn{
   padding: 0.4em 1.6em;
-  margin-left: 10px;
+  margin: 30px 0 10px 10px;
   font-size: 15px;
   text-decoration: none;
   user-select: none;
@@ -339,7 +343,7 @@ a {
 }
 .delete__btn{
   padding: 0.4em 1.6em;
-  margin-left: 10px;
+  margin: 30px 0 10px 10px;
   font-size: 15px;
   text-decoration: none;
   user-select: none;

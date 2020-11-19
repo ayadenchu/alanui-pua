@@ -1,17 +1,10 @@
 <main class="main">
   <div class="inner">
-  
     <div class="menu">
-    <div class="menu__btn">
-      <%= link_to '戻る', :back %>
-    </div>
+      <%= link_to '戻る', :back ,class: :menu__btn%>
     <% if current_user == @post.user %>
-      <div class="menu__btn">
-        <%= link_to "編集",edit_post_path %>
-      </div>
-      <div class="delete__btn">
-        <%= link_to "削除",post_path , method: :delete %>
-      </div>
+        <%= link_to "編集",edit_post_path ,class: :menu__btn %>
+        <%= link_to "削除",post_path , method: :delete ,class: :delete__btn%>
     <% end %>
   </div>
   
