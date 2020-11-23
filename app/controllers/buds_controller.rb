@@ -5,7 +5,7 @@ class BudsController < ApplicationController
     
     like = Bud.new(user_id: current_user.id, post_id: params[:post_id])
     like.save
-      redirect_to posts_path
+      redirect_to post_path(params[:post_id])
   end
 
   def destroy

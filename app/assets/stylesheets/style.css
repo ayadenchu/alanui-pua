@@ -447,6 +447,35 @@ a {
 .copyright {
   
 }*/
+/*バッドRethink*/
+.bud_rethink{
+  text-align: center;
+}
+.bud_alert {
+  padding-top: 100px;
+}
+.bud__alert{
+  margin: 50px;
+  
+}
+.alert_font{
+  font-size: 50px;
+  background: linear-gradient(transparent 70%,white 70%);
+}
+.bud__btn{
+  padding: 0.4em 1.6em;
+  font-size: 20px;
+  color: rgb(250, 243, 243);
+  text-decoration: none;
+  user-select: none;
+  border: 2px solid #eeeeee;
+  
+}
+.bud__btn:hover{
+  color: #ffffff;
+  background:rgb(187, 75, 75);
+}
+
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
