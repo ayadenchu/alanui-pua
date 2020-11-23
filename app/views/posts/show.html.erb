@@ -27,6 +27,11 @@
         <% else %>
          <td><%= link_to 'いいね', post_likes_path(@post), method: :POST %></td>
         <% end %>
+        <% if current_user.budded_by?(@post.id) %>
+          <td><%= link_to 'budを外す', post_bud_path(@post), method: :DELETE %></td>
+        <% else %>
+         <td><%= link_to 'bud', post_buds_path(@post), method: :POST %></td>
+        <% end %>
     <%#= link_to @post.category.name, "#", class: :category_name %> 
   </div>
 </main>
