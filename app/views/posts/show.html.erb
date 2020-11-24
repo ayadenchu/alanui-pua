@@ -22,6 +22,20 @@
         </a>
       </div>
     </div>
+          
+      <%= render partial: 'likes/like', locals: { post: @post} %>
+      <div class="bud_box">
+        <% if current_user.budded_by?(@post.id) %>
+          <td><%= link_to 'budを外す', post_bud_path(@post), method: :DELETE, class: :bud_btn %></td>
+        <% else %>
+          <%= link_to 'budをつける', post_buds_path(@post), method: :GET, class: :bud_btn %>
+        <% end %>
+      </div>
     <%#= link_to @post.category.name, "#", class: :category_name %> 
   </div>
+    <% if @post.buds.count >= 5 %>
+      <div class='close'>
+        <span>Close</span>
+      </div>
+    <% end %>
 </main>

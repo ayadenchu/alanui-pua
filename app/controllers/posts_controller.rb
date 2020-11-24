@@ -44,12 +44,17 @@ before_action :set_post, only: [:show, :edit, :update,:destroy]
       redirect_to root_path
     end
   end
-  
+
+  def like(user)
+    @like = Like.create(user_id: user.id)
+  end
+
+  def unlike(user)
+    @like = Like.find_by(user_id: user.id).destroy
+  end
   private
   def post_params
     params.require(:post).permit(:title, :text,:category_id, :image).merge(user_id: current_user.id)
-# form.collection_select(保存されるカラム名, オブジェクトの配列, カラムに保存される項目, 選択肢に表示されるカラム名, オプション, htmlオプション) %>
-
   end
 
   def set_post
