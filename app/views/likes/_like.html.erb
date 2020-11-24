@@ -1,0 +1,16 @@
+<% if user_signed_in? %>
+  <div class="like_bud_box">
+    <% if current_user.liked_by?(@post.id) %>
+        <%=link_to  post_like_path(@post), method: :delete, remote: true, class: :like__btn do%>
+        <span class="fa fa-heart unlike"></span>
+        <% end %>
+    <% else %>
+        <%=link_to post_likes_path(@post), method: :post, remote: true, class: :like__btn do%>
+         <span class="fa fa-heart like"></span>
+        <% end %>
+    <% end %>
+<% end %>
+      <% unless post.likes.count == 0%>
+        <div class="like_count"><span class="like_count_font">お気に入り数 : </span><%= post.likes.count %></div>
+      <% end %>
+  </div>

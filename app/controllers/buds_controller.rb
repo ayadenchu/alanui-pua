@@ -10,7 +10,7 @@ class BudsController < ApplicationController
 
   def destroy
     like = Bud.find_by(user_id: current_user.id, post_id: params[:id]).destroy
-    redirect_to posts_path
+    redirect_to post_path(params[:post_id])
   end
 
   private
