@@ -1,10 +1,18 @@
 <main class="main">
   <div class="inner">
-    <div class="menu__btn"><%= link_to 'Top', root_path %></div>
-      <div class="user_show_name"><%= @nickname %>さんの投稿一覧</div>
+    <div class="menu__btn"><%= link_to 'Top', posts_path %></div>
+        <% if current_user.posts.present? %>
+          <div class="user_show_name">~ <%= @nickname %> ~<br>My pua</div>
+        <% end %>
         <div class="post__wrapper">
         <%= render partial: 'posts/post', collection: @posts %>
       </div>
+      <div class="user_like_list">お気に入り投稿</div>
+      <% if @like_list.present? %>
+      <div class="post__wrapper">
+      <%= render partial: 'posts/post', collection: @like_list %>
+      </div >
+      <% end %>
     </div>
   </div>
 </main>

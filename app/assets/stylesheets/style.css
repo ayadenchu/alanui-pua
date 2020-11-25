@@ -36,18 +36,83 @@ a {
   color: #3b4043;
 }
 /*トップページ*/
-.index__top {
+.index___top {
   background-color: rgba(141, 92, 127, 0.761);
   height: 100vh;
-
+  padding-top: 130px;
 }
+
+.clover {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  justify-content: flex-end;
+  margin-left: calc(100vw/2);
+  }
+.clover img {
+  margin: 5px;
+  }
+
+.img2 {
+  border-radius: 50% 50% 50% 0;
+  
+  }
+.img3 {
+  
+  border-radius: 50% 0 50% 50%
+  }
+.img4 {
+  
+  border-radius: 0 50% 50% 50%
+  }
+.top_page_memu{
+  margin: 28px 25px 13px 33px;
+}
+.menu_2{
+  padding: 0.4em 1.6em;
+  font-size: 22px;
+  text-decoration: none;
+  user-select: none;
+  border: 2px solid #97292944;
+  font-family: 'Caveat', cursive;
+  margin-bottom: 4px;
+  background-color: rgb(250, 237, 177);
+}
+
+.menu_1{
+  padding: 0.4em 1.6em;
+  font-size: 22px;
+  text-decoration: none;
+  user-select: none;
+  border: 2px solid #97292944;
+  font-family: 'Caveat', cursive;
+  margin-bottom: 4px;
+  background-color:  rgb(250, 237, 177);
+}
+.menu_1 > a{
+  color: rgb(37, 78, 21);
+}
+.menu_2 > a{
+  color:  rgb(37, 78, 21);
+}
+
+.menu_2:hover{
+  color: #ffffff;
+  background:rgb(184, 107, 133);
+}
+
+.menu_1:hover{
+  color: #ffffff;
+  background:rgb(184, 107, 133);
+}
+
 /* ヘッダー */
 .font {
   font-family: 'Caveat', cursive;
 }
 .header {
   background-color: rgb(149, 204, 180);
-  padding: 20px 0;
+  padding: 30px 0;
 
 }
 .inner {
@@ -87,7 +152,6 @@ a {
 
 .form__wrapper{
   min-height: calc(100vh - 161px);
-  
 }
 
 .form__text {
@@ -217,7 +281,7 @@ a {
   margin: 15px auto;
   padding: 10px 0;
   width: 300px;
-  background:rgb(184, 107, 133);
+  background:rgb(211, 125, 129);
   box-sizing: border-box;
   text-align: center;
   justify-items: center;
@@ -269,26 +333,43 @@ a {
   text-align: center;
   background-color: rgb(55, 18, 191);
   transform: skewY(-10deg);
-  font-size: 36px;
+  font-size: 65px;
   color: #eeeeee;
   margin: calc(100%/20);
+  font-family: 'Caveat', cursive;
 }
 /* ユーザー詳細ページ */
 .user_show_name{
-  margin-top: 30px;
   text-align: center;
   font-family:'M+ Type-1 (general-j) Medium';
   font-size: 25px;
   color: rgb(149, 204, 180);
-  border-bottom: solid 5px gray;
+  border-bottom: solid 5px rgb(170, 150, 150);
+}
+.user_like_list{
+  margin-top: 30px;
+  text-align: center;
+  font-family:'M+ Type-1 (general-j) Medium';
+  font-size: 25px;
+  color: rgba(233, 142, 99, 0.829);
+  border-bottom: solid 5px rgb(170, 150, 150);
 }
 /* 投稿一覧*/
-.index_top {
-  font-size: 25px;
+.post_index_main{
+  display: block;
+  background-color: rgba(218, 211, 235, 0.884);
+  height: 100vh;
+}
+.index__top{
+  background-color: rgba(141, 92, 127, 0.761);
+  height: 100vh;
+   padding-top: 180px;
+  
 }
 .current_user {
+  font-size: 35px;
   margin-right: calc(100%/4);
-  color: rgb(225, 187, 61);
+  color: rgb(184, 107, 56);
   font-family:'M+ Type-1 (general-j) Medium';
   border-bottom: solid 5px rgb(174, 91, 118);
 }
@@ -419,7 +500,6 @@ a {
   background:rgb(184, 107, 133);
 }
 
-
 /* ユーザーページ */
 .user__wrapper{
   min-height: calc(100vh - 140px);
@@ -482,7 +562,7 @@ a {
 }
 .bud_btn{
   padding: 0.4em 1.6em;
-  font-size: 15px;
+  font-size: 20px;
   color: rgb(86, 86, 192);
   text-decoration: none;
   user-select: none;
@@ -506,19 +586,33 @@ a {
   text-align: center;
 }
 .bud_alert {
-  padding-top: 100px;
+  padding-top: 50px;
+}
+.five_alert{
+  margin-top: 30px;
+}
+.bud_note{
+  margin: 50px 0 80px 0;
 }
 .bud__alert{
-  margin: 50px;
-  
+  font-size: 30px;
+  background: linear-gradient(transparent 60%,rgb(184, 114, 114) 70%);
+}
+.note_text{
+  color: #ffffff;
+  font-size: 20px;
+}
+.bud_count{
+  margin-top: 30px;
+  font-size: 20px;
 }
 .alert_font{
-  font-size: 50px;
-  background: linear-gradient(transparent 70%,white 70%);
+  font-size: 40px;
+  background: linear-gradient(transparent 60%,white 70%);
 }
 .bud__btn{
   padding: 0.4em 1.6em;
-  font-size: 20px;
+  font-size: 25px;
   color: rgb(250, 243, 243);
   text-decoration: none;
   user-select: none;
@@ -533,6 +627,27 @@ a {
   margin-right: 60px;
   text-align: end;
 }
+.bud_menu__btn{
+  float: left;
+  padding: 0.4em 1.6em;
+  margin-left: 200px;
+  font-size: 20px;
+  text-decoration: none;
+  user-select: none;
+  border: 2px solid #eeeeee;
+  font-family: 'Caveat', cursive;
+}
+.bud_menu__btn:hover{
+  color: #ffffff;
+  background:rgb(184, 107, 133);
+}
+.index__top{
+  background-color: rgba(141, 92, 127, 0.761);
+  height: 100vh;
+  padding-top: 100px;
+}
+
+
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
@@ -554,26 +669,5 @@ a {
 
  /* スマホ表示 */
 @media (max-width: 599px) {
-  .logo {
-    width: 120px;
-  }
-  .page-heading {
-    font-size: 20px;
-  }
-  .card {
-    width: 100%;
-    margin-bottom: 60px;
-  }
-  .card__title {
-    font-size: 18px;
-  }
-  .card__summary {
-    font-size: 14px;
-  }
-  .prototype_image{
-    width: 100%;
-  }
-  .table{
-    width: 100%;
-  }
-}
+  .body {height: 100vh;
+}}
