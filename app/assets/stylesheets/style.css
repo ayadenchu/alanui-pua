@@ -36,7 +36,7 @@ a {
   color: #3b4043;
 }
 /*トップページ*/
-.index___top {
+.index__top {
   background-color: rgba(141, 92, 127, 0.761);
   height: 100vh;
   padding-top: 130px;
@@ -112,7 +112,7 @@ a {
 }
 .header {
   background-color: rgb(149, 204, 180);
-  padding: 30px 0;
+  padding: 20px 0;
 
 }
 .inner {
@@ -158,6 +158,7 @@ a {
   height: 200px;
   width: 50%;
   font-size: 20px;
+  
 }
 .pua_field{
   text-align: center;
@@ -189,11 +190,7 @@ a {
   margin-bottom: 30px;
   text-align: center;
   align-items: center;
-}
-.sign_field{
-  height: 45px;
-  width: 400px;
-  font-size: 20px;
+  
 }
 
 .form__btn{
@@ -208,8 +205,8 @@ a {
   border-radius: 3px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
   transition: 0.2s ease;
-  width: calc(100%/5);
-  height: 80px;
+  width: calc(100%/4);
+  height: 100px;
 }
 
 .form__btn:hover {
@@ -227,11 +224,6 @@ a {
 .mage__field {
   display: flex;
 }
-.nickname_field{
-  height: 45px;
-  width: 300px;
-  font-size: 20px;
-}
 /* メイン */
 .main {
   display: block;
@@ -244,7 +236,7 @@ a {
 .page-heading {
   color: rgb(50, 82, 50);
   font-size: 50px;
-  margin: 30px 0 28px 0;
+  margin-bottom: 28px;
   font-family: 'Caveat', cursive;
   border-bottom: solid 5px gray;
   text-align: center;
@@ -289,7 +281,7 @@ a {
   margin: 15px auto;
   padding: 10px 0;
   width: 300px;
-  background:rgb(211, 125, 129);
+  background:rgb(184, 107, 133);
   box-sizing: border-box;
   text-align: center;
   justify-items: center;
@@ -341,43 +333,26 @@ a {
   text-align: center;
   background-color: rgb(55, 18, 191);
   transform: skewY(-10deg);
-  font-size: 65px;
+  font-size: 36px;
   color: #eeeeee;
   margin: calc(100%/20);
-  font-family: 'Caveat', cursive;
 }
 /* ユーザー詳細ページ */
 .user_show_name{
-  text-align: center;
-  font-family:'M+ Type-1 (general-j) Medium';
-  font-size: 25px;
-  color: rgb(149, 204, 180);
-  border-bottom: solid 5px rgb(170, 150, 150);
-}
-.user_like_list{
   margin-top: 30px;
   text-align: center;
   font-family:'M+ Type-1 (general-j) Medium';
   font-size: 25px;
-  color: rgba(233, 142, 99, 0.829);
-  border-bottom: solid 5px rgb(170, 150, 150);
+  color: rgb(149, 204, 180);
+  border-bottom: solid 5px gray;
 }
 /* 投稿一覧*/
-.post_index_main{
-  display: block;
-  background-color: rgba(218, 211, 235, 0.884);
-  height: 100vh;
-}
-.index__top{
-  background-color: rgba(141, 92, 127, 0.761);
-  height: 100vh;
-   padding-top: 180px;
-  
+.index_top {
+  font-size: 25px;
 }
 .current_user {
-  font-size: 35px;
   margin-right: calc(100%/4);
-  color: rgb(184, 107, 56);
+  color: rgb(225, 187, 61);
   font-family:'M+ Type-1 (general-j) Medium';
   border-bottom: solid 5px rgb(174, 91, 118);
 }
@@ -495,18 +470,19 @@ a {
 }
 .category_name {
   padding: 0.4em 1.6em;
-    font-size: 20px;
-    color: rgb(184, 107, 133);
-    text-decoration: none;
-    user-select: none;
-    border: 2px solid rgb(119, 67, 67);
-    font-family: 'Caveat', cursive;
+  font-size: 20px;
+  color: rgb(184, 107, 133);
+  text-decoration: none;
+  user-select: none;
+  border: 2px solid rgb(119, 67, 67);
+  font-family: 'Caveat', cursive;
     border-radius: 30%;
 }
 .category_name:hover{
   color: #ffffff;
   background:rgb(184, 107, 133);
 }
+
 
 /* ユーザーページ */
 .user__wrapper{
@@ -547,17 +523,6 @@ a {
 .copyright {
   
 }*/
-.error-alert {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5vh;
-}
-
-.error-message {
-  font-size: 1.3vw;
-  list-style: circle;
-  color: rgb(182, 48, 0);
-}
 /*like*/
 .like_bud_box{
   display: flex;
@@ -581,7 +546,7 @@ a {
 }
 .bud_btn{
   padding: 0.4em 1.6em;
-  font-size: 20px;
+  font-size: 15px;
   color: rgb(86, 86, 192);
   text-decoration: none;
   user-select: none;
@@ -605,33 +570,19 @@ a {
   text-align: center;
 }
 .bud_alert {
-  padding-top: 50px;
-}
-.five_alert{
-  margin-top: 30px;
-}
-.bud_note{
-  margin: 50px 0 80px 0;
+  padding-top: 100px;
 }
 .bud__alert{
-  font-size: 30px;
-  background: linear-gradient(transparent 60%,rgb(184, 114, 114) 70%);
-}
-.note_text{
-  color: #ffffff;
-  font-size: 20px;
-}
-.bud_count{
-  margin-top: 30px;
-  font-size: 20px;
+  margin: 50px;
+  
 }
 .alert_font{
-  font-size: 40px;
-  background: linear-gradient(transparent 60%,white 70%);
+  font-size: 50px;
+  background: linear-gradient(transparent 70%,white 70%);
 }
 .bud__btn{
   padding: 0.4em 1.6em;
-  font-size: 25px;
+  font-size: 20px;
   color: rgb(250, 243, 243);
   text-decoration: none;
   user-select: none;
@@ -646,27 +597,6 @@ a {
   margin-right: 60px;
   text-align: end;
 }
-.bud_menu__btn{
-  float: left;
-  padding: 0.4em 1.6em;
-  margin-left: 200px;
-  font-size: 20px;
-  text-decoration: none;
-  user-select: none;
-  border: 2px solid #eeeeee;
-  font-family: 'Caveat', cursive;
-}
-.bud_menu__btn:hover{
-  color: #ffffff;
-  background:rgb(184, 107, 133);
-}
-.index__top{
-  background-color: rgba(141, 92, 127, 0.761);
-  height: 100vh;
-  padding-top: 100px;
-}
-
-
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
@@ -688,5 +618,26 @@ a {
 
  /* スマホ表示 */
 @media (max-width: 599px) {
-  .body {height: 100vh;
-}}
+  .logo {
+    width: 120px;
+  }
+  .page-heading {
+    font-size: 20px;
+  }
+  .card {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .card__title {
+    font-size: 18px;
+  }
+  .card__summary {
+    font-size: 14px;
+  }
+  .prototype_image{
+    width: 100%;
+  }
+  .table{
+    width: 100%;
+  }
+}
