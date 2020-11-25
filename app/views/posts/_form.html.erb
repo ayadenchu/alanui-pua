@@ -1,8 +1,9 @@
 
 <%=form_with model: @post, local: true do |f|%>
+<%= render 'shared/error_messages', model: f.object %>
   <div class="field">
     <%= f.label :title, "Title" %><br />
-    <%= f.text_field :title, class: :title__field%>
+    <%= f.text_field :title, class: :title__field,placeholder:"Up to 18 characters" %>
   </div>
   <div class="pua_field">
     <%= f.label :text, "Pua" %><br />
