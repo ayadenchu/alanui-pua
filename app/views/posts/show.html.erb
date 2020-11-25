@@ -1,7 +1,8 @@
 <main class="main">
   <div class="inner">
     <div class="menu">
-      <%= link_to '戻る', :back ,class: :menu__btn%>
+    <input type="button" onclick="history.back()" class="menu__btn" value="戻る">
+  <% if user_signed_in? %>
     <% if current_user == @post.user %>
         <%= link_to "編集",edit_post_path ,class: :menu__btn %>
         <%= link_to "削除",post_path , method: :delete ,class: :delete__btn%>
@@ -25,13 +26,15 @@
           
       <%= render partial: 'likes/like', locals: { post: @post} %>
       <div class="bud_box">
+        <% unless @post.buds.count >= 5 %>
         <% if current_user.budded_by?(@post.id) %>
           <td><%= link_to 'budを外す', post_bud_path(@post), method: :DELETE, class: :bud_btn %></td>
         <% else %>
           <%= link_to 'budをつける', post_buds_path(@post), method: :GET, class: :bud_btn %>
         <% end %>
+        <% end %>
       </div>
-    <%#= link_to @post.category.name, "#", class: :category_name %> 
+  <% end %>
   </div>
     <% if @post.buds.count >= 5 %>
       <div class='close'>
