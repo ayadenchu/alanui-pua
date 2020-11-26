@@ -37,9 +37,9 @@ before_action :set_post,only: [:show, :edit, :update,:destroy]
   end
 
   def destroy
-    if current_user == @post.user
+    if current_user.id == @post.user.id
       @post.destroy
-      redirect_to root_path
+      redirect_to action: :index
     else
       redirect_to root_path
     end

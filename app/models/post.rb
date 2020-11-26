@@ -2,8 +2,8 @@ class Post < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
   belongs_to :user
-  has_many :likes
-  has_many :buds
+  has_many :likes,dependent: :destroy
+  has_many :buds,dependent: :destroy
   has_one_attached :image
 
   with_options presence: true do

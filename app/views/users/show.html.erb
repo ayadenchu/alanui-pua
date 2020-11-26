@@ -19,7 +19,7 @@
       </div>
     </header>
     <div class="inner">
-    <div class="menu__btn"><%= link_to 'Top', posts_path %></div>
+    <div class="menu__btn"><%= link_to '一覧', posts_path %></div>
         <% if current_user.posts.present? %>
           <div class="user_show_name">~ <%= @nickname %> ~<br>My pua</div>
         <% end %>
