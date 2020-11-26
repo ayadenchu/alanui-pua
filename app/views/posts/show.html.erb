@@ -20,7 +20,7 @@
     </header>
   <div class="inner">
     <div class="menu">
-    <%=link_to '戻る', 'javascript:history.back()', class: :menu__btn %>
+    <%= link_to '一覧', posts_path ,class: :menu__btn%>
   <% if user_signed_in? %>
     <% if current_user == @post.user %>
         <%= link_to "編集",edit_post_path ,class: :menu__btn %>
@@ -43,20 +43,13 @@
         </a>
       </div>
     </div>
-          
+    <div class="like_bud_box">
       <%= render partial: 'likes/like', locals: { post: @post} %>
-      <div class="bud_box">
-      <% if user_signed_in? %>
-        <% unless @post.buds.count >= 5 %>
-          <% if current_user.budded_by?(@post.id) %>
-            <td><%= link_to 'budを外す', post_bud_path(@post), method: :DELETE, class: :bud_btn %></td>
-          <% else %>
-            <%= link_to 'budをつける', post_buds_path(@post), method: :GET, class: :bud_btn %>
-          <% end %>
-        <% end %>
+      <%= render partial: 'buds/bud', locals: { post: @post} %>
+    </div>
+    <% unless @post.likes.count == 0%>
+        <div class="like_count"><span class="like_count_font">お気に入り数 : </span><%= @post.likes.count %></div>
       <% end %>
-      </div>
-  
   </div>
     <% if @post.buds.count >= 5 %>
       <div class='close'>

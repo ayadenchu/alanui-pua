@@ -1,0 +1,16 @@
+
+      <% if user_signed_in? %>
+        <% unless @post.buds.count >= 5 %>
+          <% if current_user.budded_by?(@post.id) %>
+            <td><%= link_to post_bud_path(@post), method: :DELETE do%></td>
+            <span class="fa fa-thumbs-down unbud" aria-hidden="true"></span>
+            <% end %>
+          <% else %>
+            <%= link_to post_buds_path(@post), method: :GET do %>
+            <span class="fa fa-thumbs-down bud" aria-hidden="true"></span>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+
+      

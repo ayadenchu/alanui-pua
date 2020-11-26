@@ -288,6 +288,7 @@ a {
   font-size: 30px;
   font-family: 'M+ Type-1 (general-j) Medium';
   justify-content: center;
+  text-decoration: underline rgb(201, 184, 184);
 }
 .post__body{
   padding:10px;
@@ -580,41 +581,45 @@ a {
   display: flex;
   font-size: 50px;
   align-items: center;
-  justify-content: space-between;
-  margin: 0 40px;
-}
-.like{
-  color: #8899a6;
+  justify-content: center;
   
 }
 .like_count{
   font-size: 15px;
 }
+.like{
+  color: #8899a6;
+  margin-right: 40px;
+}
 .unlike{
   color: #c75074;
+  margin-right: 40px;
 }
 .fa-heart{
   size: 50px;
 }
-.bud_btn{
-  padding: 0.4em 1.6em;
-  font-size: 20px;
-  color: rgb(86, 86, 192);
-  text-decoration: none;
-  user-select: none;
-  border: 2px solid #eeeeee;
-  
+.thumbs-down{
+  size:50px;
 }
-.bud_btn:hover{
-  color: #ffffff;
-  background:rgb(44, 28, 194);
+.unbud{
+  color: #1e0677;
+  margin-left: 40px;
+  margin-bottom: 15px;
+}
+.bud {
+  color: #8899a6;
+  margin-left: 40px;
+  margin-bottom: 15px;
 }
 
+.like_bud_field{
+  display: flex;
+}
 .like_count{
-  text-align: end;
-  margin-right: 30px;
+  margin-left: 50px;
 }
 .like_count_font{
+  font-size: 20px;
   background: linear-gradient(transparent 70%,rgb(184, 107, 133));
 }
 /*バッドRethink*/
