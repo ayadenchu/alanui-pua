@@ -48,22 +48,26 @@ a {
 .catchcopy{
   padding-top: 10px;
   text-align: center;
-  margin: 0 0 0 150px;
-  color: whitesmoke;
+  margin-left: 200px;
+  color: lightgrey;
   font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+.catchcopy-1{
+  font-size: 40px;
+  color: whitesmoke;
 }
 .clover {
   display: flex;
   flex-wrap: wrap;
   width: 500px;
   justify-content: flex-end;
-  margin-left: calc(100vw/8);
+  margin-left: 80px;
 }
 
 .top_title{
   width: calc(100%/2);
-  margin: 0 400px 0 150px;
-  font-size: 100px;
+  margin: 35px 400px 0 200px;
+  font-size: 120px;
   font-family: 'Caveat', cursive;
   color:rgba(88, 51, 78, 0.761);
 }
