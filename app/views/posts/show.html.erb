@@ -1,4 +1,23 @@
 <main class="main">
+<header class="header">
+      <div class="inner">
+        <div class="nav">
+          <%= link_to "AlanuiPua", root_path ,class:"title" %> 
+            <% if user_signed_in? %>
+              <div class="nav__right">
+                <%= link_to "My page", user_path(current_user.id),class: :nav__btn %>
+                <%= link_to "Log out", destroy_user_session_path, method: :delete ,class: :nav__btn %> 
+                <%= link_to "New Pua", new_post_path, class: :nav__btn %>
+              </div>
+            <% else %>
+              <div class="nav__right">
+                <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+                <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
+              </div>
+            <% end %>
+          </div>
+      </div>
+    </header>
   <div class="inner">
     <div class="menu">
     <input type="button" onclick="history.back()" class="menu__btn" value="戻る">
@@ -7,6 +26,7 @@
         <%= link_to "編集",edit_post_path ,class: :menu__btn %>
         <%= link_to "削除",post_path , method: :delete ,class: :delete__btn%>
     <% end %>
+  <% end %>
   </div>
   
     <h4 class="title__show"><%= @post.title %></h4>
@@ -27,14 +47,16 @@
       <%= render partial: 'likes/like', locals: { post: @post} %>
       <div class="bud_box">
         <% unless @post.buds.count >= 5 %>
-        <% if current_user.budded_by?(@post.id) %>
-          <td><%= link_to 'budを外す', post_bud_path(@post), method: :DELETE, class: :bud_btn %></td>
-        <% else %>
-          <%= link_to 'budをつける', post_buds_path(@post), method: :GET, class: :bud_btn %>
-        <% end %>
+        <% if user_signed_in? %>
+          <% if current_user.budded_by?(@post.id) %>
+            <td><%= link_to 'budを外す', post_bud_path(@post), method: :DELETE, class: :bud_btn %></td>
+          <% else %>
+            <%= link_to 'budをつける', post_buds_path(@post), method: :GET, class: :bud_btn %>
+          <% end %>
+          <% end %>
         <% end %>
       </div>
-  <% end %>
+  
   </div>
     <% if @post.buds.count >= 5 %>
       <div class='close'>

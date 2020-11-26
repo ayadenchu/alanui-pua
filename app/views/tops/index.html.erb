@@ -1,11 +1,22 @@
 <div class="index___top">
+<div class="top_title">Alanui Pua
+<br></div>
 <div class="clover-box">
-
+<h3 class="catchcopy"><br>
+<br>
+<br>あなたの Pua ( 花 ) をシェアしよう
+<br>
+<br>「嬉しい」や「好き」を共有してみましょう<h3>
   <div class="clover">
     <div class="top_page_memu">
       <div class="menu_2"><%= link_to 'Pua 一覧', posts_path %></div>
+     <% if user_signed_in? %>
+      <div class="menu_1"><%= link_to "New pua", new_post_path %></div>
+      <div class="menu_1"><%= link_to "My page", user_path(current_user.id) %></div>
+      <% else %>
       <div class="menu_1"><%= link_to "Log in", new_user_session_path %></div>
       <div class="menu_1"><%= link_to "Sign up", new_user_registration_path %></div>
+      <% end %>
     </div>
     <img class="img2" src="http://www.webcreatorbox.com/sample/images/flower-yellow.jpg" alt="" />
     <img class="img3" src="http://www.webcreatorbox.com/sample/images/flower-blue.jpg" alt="" />
