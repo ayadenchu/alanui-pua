@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap');
 /* リセットCSS */
 * {
   box-sizing: border-box;
@@ -36,7 +37,7 @@ a {
   color: #3b4043;
 }
 /*トップページ*/
-.index___top {
+.index_top_page {
   background-color: rgba(141, 92, 127, 0.761);
   height: 100vh;
   padding-top: 50px;
@@ -48,6 +49,8 @@ a {
   padding-top: 10px;
   text-align: center;
   margin: 0 0 0 150px;
+  color: whitesmoke;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 .clover {
   display: flex;
@@ -62,6 +65,7 @@ a {
   margin: 0 400px 0 150px;
   font-size: 100px;
   font-family: 'Caveat', cursive;
+  color:rgba(88, 51, 78, 0.761);
 }
 
 .clover img {
@@ -383,12 +387,7 @@ a {
   background-color: rgba(218, 211, 235, 0.884);
   height: 100vh;
 }
-.index__top{
-  background-color: rgba(141, 92, 127, 0.761);
-  
-  padding-top: 180px;
-  display: inline;
-}
+
 .current_user {
   font-size: 35px;
   margin-right: calc(100%/4);
