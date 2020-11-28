@@ -48,7 +48,7 @@ a {
 .catchcopy{
   padding-top: 10px;
   text-align: center;
-  margin-left: 200px;
+  margin-left: 90px;
   color: lightgrey;
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
@@ -61,7 +61,7 @@ a {
   flex-wrap: wrap;
   width: 500px;
   justify-content: flex-end;
-  margin-left: 80px;
+  margin-left: 40px;
 }
 
 .top_title{
