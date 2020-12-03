@@ -60,3 +60,4 @@ group :production do
   gem 'rails_12factor'
 end
 gem 'pry-rails'
+gem 'rspec-rails', '~> 4.0.0'
