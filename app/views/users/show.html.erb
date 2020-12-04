@@ -26,8 +26,8 @@
         <div class="post__wrapper">
         <%= render partial: 'posts/post', collection: @posts %>
       </div>
-      <div class="user_like_list">お気に入り投稿</div>
       <% if @like_list.present? %>
+      <div class="user_like_list">お気に入り投稿</div>
       <div class="post__wrapper">
       <%= render partial: 'posts/post', collection: @like_list %>
       </div >

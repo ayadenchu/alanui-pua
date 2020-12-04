@@ -5,7 +5,7 @@ RSpec.describe Post, type: :model do
     @post = FactoryBot.build(:post)
   end
 
-  describe 'ツイートの保存' do
+  describe 'Postの保存' do
     context "Postが保存できる場合" do
       it "全ての項目が埋まっていては保存される" do
         expect(@post).to be_valid
@@ -15,7 +15,7 @@ RSpec.describe Post, type: :model do
         expect(@post).to be_valid
       end
     end
-    context "ツイートが保存できない場合" do
+    context "postが保存できない場合" do
       it "タイトルがないと保存できない" do
         @post.title = ""
         @post.valid?
