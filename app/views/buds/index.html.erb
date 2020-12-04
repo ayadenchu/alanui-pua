@@ -20,16 +20,15 @@
 <div class="index__top">
   <div class="bud_rethink">
   <div class="modoru_btn"><%=link_to '戻る', 'javascript:history.back()', class: :bud_menu__btn%></div>
-    <p class="bud_alert"><span class="alert_font" >本当にBudを押しますか？</span></p>
+    <p class="bud_alert"><span class="alert_font" >本当にBadを押しますか？</span></p>
 
-    <div class="five_alert"><span class="bud__alert">5つBudがつくと投稿がcloseします。<span></div>
+    <div class="five_alert"><span class="bud__alert">5つBadがつくと投稿がcloseします。<span></div>
       <div class="bud_note">
         <h5 class="note_text">悪口や誹謗中傷と感じる投稿でしたか？
         <br>
-        よく考えてからBud評価を押しましょう。</h5>
+        よく考えてからBad評価を押しましょう。</h5>
       </div>
 
     <%= link_to 'budを押す', post_buds_path(@post), method: :POST ,class: :bud__btn%>
-    <div class="bud_count"><span class="bud_count_font">この投稿のBud数 : </span><%= @post.buds.count %></div>
   </div>
 </div>
