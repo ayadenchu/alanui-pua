@@ -48,8 +48,8 @@
       <%= render partial: 'buds/bud', locals: { post: @post} %>
     </div>
     <% unless @post.likes.count == 0%>
-        <div class="like_count"><span class="like_count_font">お気に入り数 : </span><%= @post.likes.count %></div>
-      <% end %>
+        <div class="like_count"><span class="fa fa-heart unlike"></span><div class="like_count_font"><%= @post.likes.count %></div></div>
+    <% end %>
   </div>
     <% if @post.buds.count >= 5 %>
       <div class='close'>

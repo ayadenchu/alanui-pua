@@ -557,14 +557,7 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-/* フッター */
 
-/*.footer {
- 
-}
-.copyright {
-  
-}*/
 .error-alert {
   display: flex;
   justify-content: center;
@@ -589,11 +582,9 @@ a {
 }
 .like{
   color: #8899a6;
-  margin-right: 40px;
 }
 .unlike{
   color: #c75074;
-  margin-right: 40px;
 }
 .fa-heart{
   size: 50px;
@@ -611,17 +602,22 @@ a {
   margin-left: 40px;
   margin-bottom: 15px;
 }
-
 .like_bud_field{
   display: flex;
 }
 .like_count{
-  margin-left: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 50px;
+  font-size: 30px;
 }
 .like_count_font{
-  font-size: 20px;
-  background: linear-gradient(transparent 70%,rgb(184, 107, 133));
+  margin-left: 7px;
+  font-size: 17px;
+  color: lightslategray;
 }
+
 /*バッドRethink*/
 .bud_rethink{
   text-align: center;
