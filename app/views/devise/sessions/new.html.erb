@@ -19,6 +19,7 @@
       </div>
     </header>
     <div class="form__wrapper">
+    <div class="inner">
       <h2 class="page-heading">Log in</h2>
       <%= form_with model: @user, url: new_user_session_path, local: true do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
@@ -37,6 +38,7 @@
           <%= f.submit "ログイン", class: :form__btn  %>
         </div>
       <% end %>
+      </div>
     </div>
   </div>
 </div>

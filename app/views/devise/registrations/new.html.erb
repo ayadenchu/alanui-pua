@@ -19,6 +19,7 @@
       </div>
     </header>
     <div class="form__wrapper">
+    <div class="inner">
       <h2 class="page-heading">Sign up</h2>
       <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
@@ -48,6 +49,7 @@
           <%= f.submit "新規登録", class: :form__btn  %>
         </div>
       <% end %>
+      </div>
     </div>
   </div>
 </div>
