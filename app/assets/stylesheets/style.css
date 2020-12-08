@@ -59,7 +59,7 @@ a {
 .clover {
   display: flex;
   flex-wrap: wrap;
-  width: 500px;
+  max-width: 500px;
   justify-content: flex-end;
   margin-left: 40px;
 }
@@ -713,7 +713,13 @@ a {
     height: 100vh;
     width: 100vw;
   }
-  
+  .clover-box{
+    display: block;
+  }
+  .clover{
+    width: auto;
+    height: auto;
+  }
 }
 /* iPad */
 
