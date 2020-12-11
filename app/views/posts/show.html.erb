@@ -21,12 +21,10 @@
   <div class="inner">
     <div class="menu">
     <%= link_to '一覧', posts_path ,class: :menu__btn%>
-  <% if user_signed_in? %>
-    <% if current_user == @post.user %>
+    <% if user_signed_in? && current_user == @post.user %>
         <%= link_to "編集",edit_post_path ,class: :menu__btn %>
         <%= link_to "削除",post_path , method: :delete ,class: :delete__btn%>
     <% end %>
-  <% end %>
   </div>
   
     <h4 class="title__show"><%= @post.title %></h4>

@@ -23,14 +23,14 @@
         <% if current_user.posts.present? %>
           <div class="user_show_name">~ <%= @nickname %> ~<br>My pua</div>
         <% end %>
-        <div class="post__wrapper">
-        <%= render partial: 'posts/post', collection: @posts %>
+          <div class="post__wrapper">
+          <%= render partial: 'posts/post', collection: @posts %>
       </div>
       <% if @like_list.present? %>
-      <div class="user_like_list">お気に入り</div>
-      <div class="post__wrapper">
-      <%= render partial: 'posts/post', collection: @like_list %>
-      </div >
+        <div class="user_like_list">お気に入り</div>
+        <div class="post__wrapper">
+        <%= render partial: 'posts/post', collection: @like_list %>
+        </div >
       <% end %>
     </div>
   </div>
