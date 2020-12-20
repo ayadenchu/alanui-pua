@@ -137,10 +137,9 @@ a {
 .font {
   font-family: 'Caveat', cursive;
 }
-.header {
+header {
   background-color: rgb(149, 204, 180);
   padding: 30px 0;
-  
 }
 .inner {
   width: 1100px;
@@ -400,7 +399,6 @@ a {
 .post_index_main{
   display: block;
   background-color: rgba(218, 211, 235, 0.884);
-  height: 100vh;
 }
 
 .current_user {
