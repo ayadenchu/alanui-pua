@@ -2,10 +2,10 @@
   <% unless @post.buds.count >= 5 %>
     <% if current_user.liked_by?(@post.id) %>
       <%=link_to post_like_path(@post), method: :delete, class: :like__btn do%>
-      <span class="fa fa-heart unlike"></span><% end %>
+      <span class="fa fa-heart unlike" id="like"></span><% end %>
       <% else %>
       <%=link_to post_likes_path(@post), method: :post, class: :like__btn do%>
-      <span class="fa fa-heart like"></span><% end %>
+      <span class="fa fa-heart like" id="like"></span><% end %>
     <% end %>
   <% end %>
 <% end %>
